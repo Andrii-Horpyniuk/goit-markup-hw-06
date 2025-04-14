@@ -157,16 +157,27 @@ img {
   padding-bottom: 188px; */
   padding-top: 72px;
   padding-bottom: 72px;
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  max-width: 320px;
   margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office-mob-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob-2x-min.jpg);
+  }
 }
 
 .hero-title {
@@ -179,6 +190,7 @@ img {
   max-width: 496px;
   margin: 0 auto;
   margin-bottom: 48px; */
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -280,7 +292,7 @@ img {
 
 .team {
   background: #f4f4fd;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .team-title {
   font-weight: 700;
@@ -296,9 +308,13 @@ img {
 .team-bottom {
   padding: 32px 0px;
 }
+
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  gap: 72px;
+  justify-content: center;
 }
 .team-subtitle {
   font-weight: 500;
@@ -313,7 +329,7 @@ img {
 
 .team-item {
   background-color: #ffffff;
-  flex-basis: calc((100% - 72px) / 4);
+  /* flex-basis: calc((100% - 72px) / 4); */
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -819,6 +835,39 @@ img {
     max-width: 768px;
   }
 
+  .team .container,
+  .footer .container {
+    max-width: 584px;
+  }
+
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 768px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab-min.jpg);
+  }
+
+  @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-tab-2x-min.jpg);
+    }
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    max-width: 496px;
+  }
+
   .skills-item {
     flex-basis: calc((100% - 48px) / 2);
   }
@@ -846,11 +895,54 @@ img {
   .portfolio-list {
     gap: 72px 24px;
   }
+
+  .team-list {
+    /* max-width: 552px; */
+    gap: 64px 24px;
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
 }
 /* ------------DESKTOP--------------- */
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .team .container,
+  .footer .container {
+    max-width: 1158px;
+  }
+
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+  }
+
+  @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-office-desk-2x-min.jpg);
+    }
+  }
+
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 48px;
   }
 
   .skills {
@@ -907,5 +999,18 @@ img {
 
   .portfolio-list {
     gap: 48px 24px;
+  }
+
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-item {
+    flex-basis: calc((100% - 72px) / 4);
   }
 }
